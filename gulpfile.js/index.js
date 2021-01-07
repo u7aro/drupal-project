@@ -6,6 +6,8 @@ const config = require('config');
 const log = require('fancy-log');
 const { dest, lastRun, parallel, series, src, watch } = require('gulp');
 const plugins = require('gulp-load-plugins')();
+const fibers = require('fibers');
+plugins.sass.compiler = require('sass');
 
 const cssGlobs = 'app/{modules,themes}/custom/**/css/**/*.css';
 const jsGlobs = 'app/{modules,themes}/custom/**/js/**/*.es6.js';
@@ -41,6 +43,7 @@ function buildScss() {
       }),
     )
     .pipe(plugins.sassGlob())
+    .pipe(plugins.sass({ fiber: fibers }))
     .pipe(plugins.sass(config.sass))
     .pipe(
       plugins.rename(path => {
