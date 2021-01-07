@@ -13,6 +13,7 @@
     "config": "^3.3.3",
     "eslint-config-drupal": "^5.0.2",
     "fancy-log": "^1.3.3",
+    "fibers": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-eslint": "^6.0.0",
@@ -22,6 +23,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-stylelint": "^13.0.0",
+    "sass": "^1.32.2",
     "stylelint": "^13.8.0",
     "stylelint-config-drupal": "^1.0.0",
     "stylelint-scss": "^3.18.0"
@@ -30,9 +32,5 @@
     "presets": [
       "@babel/preset-env"
     ]
-  },
-  "dependencies": {
-    "fibers": "^5.0.0",
-    "sass": "^1.32.2"
   }
 }
