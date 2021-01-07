@@ -42,6 +42,7 @@ function buildScss() {
     )
     .pipe(plugins.sassGlob())
     .pipe(plugins.sass(config.sass))
+    .pipe(plugins.autoprefixer())
     .pipe(
       plugins.rename(path => {
         path.dirname = path.dirname.replace(/\/scss(\/|$)/, '/css$1');
