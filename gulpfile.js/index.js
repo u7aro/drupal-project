@@ -42,7 +42,6 @@ function buildScss() {
         },
       }),
     )
-    .pipe(plugins.sassGlob())
     .pipe(plugins.sass({ 
       fiber: Fiber,
       includePaths: ['node_modules/breakpoint-sass/stylesheets'],
