@@ -43,8 +43,11 @@ function buildScss() {
       }),
     )
     .pipe(plugins.sassGlob())
-    .pipe(plugins.sass({ fiber: Fiber }))
-    .pipe(plugins.sass(config.sass))
+    .pipe(plugins.sass({ 
+      fiber: Fiber,
+      includePaths: ['node_modules/breakpoint-sass/stylesheets'],
+      outputStyle: 'expanded'
+    }))
     .pipe(plugins.autoprefixer())
     .pipe(
       plugins.rename(path => {
