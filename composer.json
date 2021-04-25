@@ -58,6 +58,11 @@
         ]
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "drupal-paranoia": {
+            "app-dir": "app",
+            "web-dir": "web"
+        },
         "drupal-scaffold": {
             "file-mapping": {
                 "[web-root]/.eslintrc.json": false
@@ -65,10 +70,6 @@
             "locations": {
                 "web-root": "app/"
             }
-        },
-        "drupal-paranoia": {
-            "app-dir": "app",
-            "web-dir": "web"
         },
         "installer-paths": {
             "app/core": ["type:drupal-core"],
@@ -78,11 +79,10 @@
             "app/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
         },
-        "composer-exit-on-patch-failure": true,
+        "patches": {
+        },
         "patchLevel": {
             "drupal/core": "-p2"
-        },
-        "patches": {
         }
     }
 }
